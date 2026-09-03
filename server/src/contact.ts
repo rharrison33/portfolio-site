@@ -13,6 +13,38 @@ function isNonEmptyString(value: unknown): value is string {
   return typeof value === "string" && value.trim().length > 0;
 }
 
+interface Submission {
+  name: string;
+  email: string;
+  message: string;
+  receivedAt: string;
+}
+
+async function sendNotificationEmail(submission: Submission): Promise<void> {
+  const { RESEND_API_KEY, CONTACT_TO_EMAIL, CONTACT_FROM_EMAIL } = process.env;
+  if (!RESEND_API_KEY || !CONTACT_TO_EMAIL) return;
+
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${RESEND_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from: CONTACT_FROM_EMAIL || "Portfolio Contact Form <onboarding@resend.dev>",
+      to: CONTACT_TO_EMAIL,
+      reply_to: submission.email,
+      subject: `New portfolio message from ${submission.name}`,
+      text: `From: ${submission.name} <${submission.email}>\n\n${submission.message}`,
+    }),
+  });
+
+  if (!res.ok) {
+    const body = await res.text().catch(() => "");
+    throw new Error(`Resend API error ${res.status}: ${body}`);
+  }
+}
+
 router.post("/", rateLimit(5, 10 * 60 * 1000), async (req, res) => {
   const { name, email, message } = req.body ?? {};
 
@@ -43,8 +75,11 @@ router.post("/", rateLimit(5, 10 * 60 * 1000), async (req, res) => {
     await saveSubmission(submission);
     console.log(`[contact] New submission from ${submission.email}`);
 
-    // TODO: wire up real email delivery here (e.g. Resend, Nodemailer + SMTP)
-    // using CONTACT_TO_EMAIL / RESEND_API_KEY from server/.env — see .env.example.
+    try {
+      await sendNotificationEmail(submission);
+    } catch (emailErr) {
+      console.error("[contact] Failed to send notification email:", emailErr);
+    }
 
     return res.status(200).json({ ok: true });
   } catch (err) {
