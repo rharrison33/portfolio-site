@@ -121,11 +121,11 @@ export const work: WorkItem[] = [
 export const experience: ExperienceItem[] = [
   {
     id: "formation",
-    role: "Interview Prep & Career Acceleration Program for Senior Software Engineers",
+    role: "Engineering Fellowship for Senior Software Engineers",
     org: "Formation",
     dates: "Aug 2026 – Present",
     bullets: [
-      "Completing Formation's program, featuring adaptive system design and algorithms training, mock interviews, and mentorship from staff-level engineers and hiring managers at top tech companies.",
+      "Selected for Formation, an engineering fellowship pairing senior software engineers with staff-level mentors and hiring managers from top tech companies to sharpen advanced system design, technical leadership, and problem-solving skills.",
     ],
   },
   {
