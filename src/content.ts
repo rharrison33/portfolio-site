@@ -125,7 +125,7 @@ export const experience: ExperienceItem[] = [
     org: "Formation",
     dates: "Aug 2026 – Present",
     bullets: [
-      "Selected for Formation, an engineering fellowship pairing senior software engineers with staff-level mentors and hiring managers from top tech companies to sharpen advanced system design, technical leadership, and problem-solving skills.",
+      "Participating in Formation, an engineering fellowship pairing senior software engineers with staff-level mentors and hiring managers from top tech companies to sharpen advanced system design, technical leadership, and problem-solving skills.",
     ],
   },
   {
