@@ -51,34 +51,22 @@ export const profile: Profile = {
   location: "Salt Lake City, UT",
   photo: "/photo.jpg",
   links: {
-    github: "https://github.com/rharrison33", // TODO: replace
-    linkedin: "https://www.linkedin.com/in/robertwharrison17/", // TODO: replace
-    email: "robertwharrison17@gmail.com", // pulled from your account — update if you'd like a different contact address
-    resume: "/resume.pdf", // TODO: drop your resume PDF into /public and confirm this path
+    github: "https://github.com/rharrison33",
+    linkedin: "https://www.linkedin.com/in/robertwharrison17/",
+    email: "robertwharrison17@gmail.com",
+    resume: "/resume.pdf",
   },
 };
 
 export const about: AboutContent = {
   paragraphs: [
-    "I'm a senior software engineer with nine years of experience building backend systems, distributed workflows, and full-stack products. I studied computer science at Georgia Tech and have built much of my career around software that engineering and operations teams rely on every day.",
-    "Most recently, I spent four years at Tesla Energy building services, APIs, integrations, and event-driven workflows for residential and commercial energy products. Before Tesla, I worked at LBA Ware, where I built high-performance BI dashboards that gave mortgage companies visibility into their operations — work that shipped shortly before the company was acquired by SimpleNexus.",
-    "I'm comfortable across the stack, but backend engineering is where I do my strongest work. I'm currently a Formation Fellow, working with experienced engineering mentors and peers to deepen my system-design, technical problem-solving, and leadership skills, while pursuing senior backend and full-stack roles with meaningful ownership — particularly in distributed systems, workflow automation, and AI-enabled products.",
+    "I'm a senior software engineer with nine years of experience building backend systems, distributed workflows, and full-stack products that engineering and operations teams rely on every day. I studied computer science at Georgia Tech.",
+    "Most recently, I spent four years at Tesla Energy building full-stack and backend systems — APIs, integrations, and event-driven workflows — for residential and commercial energy products. Before that, I built high-performance BI dashboards at LBA Ware, giving mortgage companies visibility into their operations, shortly before the company was acquired by SimpleNexus.",
+    "I'm comfortable across the stack, but backend engineering is where I do my strongest work. I'm currently a Formation Fellow, working with staff-level mentors to sharpen my system design and technical leadership skills, while pursuing senior backend and full-stack roles involving distributed systems, workflow automation, and AI-enabled products.",
   ],
 };
 
 export const work: WorkItem[] = [
-  {
-    id: "system-cost-update-tool",
-    title: "System Cost Update Tool",
-    summary:
-      "Tooling to reprice thousands of active commercial energy quotes without manual, one-by-one updates.",
-    problem:
-      "Commercial energy quotes needed to be repriced as system costs changed, but doing this manually across a large, active pipeline was slow and error-prone.",
-    build:
-      "Built a tool to reprice more than 5,000 active commercial energy quotes representing a multi-billion-dollar pipeline, with processing designed around controlled, time-boxed batches to keep updates safe and predictable.",
-    impact: "Eliminated roughly 90% of the manual pricing work involved.",
-    stack: [".NET", "PostgreSQL", "SQL", "Batch Processing"],
-  },
   {
     id: "commercial-sales-platform",
     title: "Tesla Energy Commercial Sales Platform",
@@ -104,6 +92,18 @@ export const work: WorkItem[] = [
     ],
   },
   {
+    id: "system-cost-update-tool",
+    title: "System Cost Update Tool",
+    summary:
+      "Tooling to reprice thousands of active commercial energy quotes without manual, one-by-one updates.",
+    problem:
+      "Commercial energy quotes needed to be repriced as system costs changed, but doing this manually across a large, active pipeline was slow and error-prone.",
+    build:
+      "Built a tool to reprice more than 5,000 active commercial energy quotes representing a multi-billion-dollar pipeline, with processing designed around controlled, time-boxed batches to keep updates safe and predictable.",
+    impact: "Eliminated roughly 90% of the manual pricing work involved.",
+    stack: [".NET", "PostgreSQL", "SQL", "Batch Processing"],
+  },
+  {
     id: "megapack-delivery-scheduling",
     title: "Megapack Delivery Scheduling",
     summary:
@@ -120,26 +120,23 @@ export const work: WorkItem[] = [
 
 export const experience: ExperienceItem[] = [
   {
+    id: "tesla-energy",
+    role: "Senior Software Engineer",
+    org: "Tesla, Inc.",
+    dates: "Oct 2020 – Apr 2024",
+    bullets: [
+      "Owned backend and full-stack systems for Tesla Energy's commercial sales organization — including the Residential and Commercial Pricing Gateway (Solar, Powerwall, Megapack) and the quoting, repricing, and delivery-scheduling platforms detailed in Work below.",
+      "Led design discussions with Product on new commercial quoting capabilities and regularly mentored junior engineers on service architecture and implementation approach.",
+      "Replaced manual, Excel-based processes with automated systems across a multi-billion-dollar Megapack pipeline — eliminating ~90% of manual pricing effort and delivering major time savings for logistics teams — while improving production observability through dashboards, monitoring, and automated alerting.",
+    ],
+  },
+  {
     id: "formation",
     role: "Engineering Fellowship for Senior Software Engineers",
     org: "Formation",
     dates: "Aug 2026 – Present",
     bullets: [
       "Participating in Formation, an engineering fellowship pairing senior software engineers with staff-level mentors and hiring managers from top tech companies to sharpen advanced system design, technical leadership, and problem-solving skills.",
-    ],
-  },
-  {
-    id: "tesla-energy",
-    role: "Senior Software Engineer",
-    org: "Tesla, Inc.",
-    dates: "Oct 2020 – Apr 2024",
-    bullets: [
-      "Co-owned Tesla's Energy Pricing Gateway for both Residential and Commercial, handling all pricing requests for Solar Roof, Solar Panels, Powerwall, and Megapack.",
-      "Architected and delivered a full-stack, event-driven web application (React, .NET, PostgreSQL, Kafka, RabbitMQ) that replaced Excel-based quoting for Megapack deals — some exceeding $1 billion — making the sales team significantly more efficient.",
-      "Engineered the System Cost Update Tool, repricing 5,000+ active commercial quotes across a multi-billion-dollar Megapack sales pipeline and eliminating ~90% of manual pricing work.",
-      "Automated Megapack delivery scheduling with a full-stack, event-driven application (React, .NET, PostgreSQL, Kafka) that calculated delivery schedules from upstream factory build data, delivering major time savings for logistics teams.",
-      "Improved production observability by implementing service-health dashboards, monitoring, and automated alerting, enabling faster detection and diagnosis of production issues.",
-      "Led design discussions with Product whenever new capabilities were scoped for the commercial quoting platform, translating requirements into detailed technical plans of action, and regularly mentored junior engineers on service architecture and implementation approach.",
     ],
   },
   {
