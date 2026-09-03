@@ -5,6 +5,12 @@ import helmet from "helmet";
 import contactRouter from "./contact.js";
 
 const app = express();
+// Trust the first hop's X-Forwarded-For (Render's reverse proxy) so req.ip
+// reflects the real client IP instead of the proxy's — otherwise every
+// request looks like it comes from the same IP and shares one rate-limit
+// bucket.
+app.set("trust proxy", 1);
+
 // API_PORT is used for local dev (see server/.env) to avoid colliding with
 // whatever PORT the frontend dev server or a deploy host has claimed. Falls
 // back to PORT for hosts (Render, Railway, etc.) that only set that.
