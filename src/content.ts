@@ -61,8 +61,8 @@ export const profile: Profile = {
 export const about: AboutContent = {
   paragraphs: [
     "I'm a senior software engineer with nine years of experience building backend systems, distributed workflows, and full-stack products. I studied computer science at Georgia Tech and have built much of my career around software that engineering and operations teams rely on every day.",
-    "Most recently, I spent four years at Tesla Energy building services, APIs, integrations, and event-driven workflows for residential and commercial energy products. Before Tesla, I worked at LBA Ware, where I built high-performance BI dashboards that gave hundreds of mortgage companies visibility into their operations — work that shipped shortly before the company was acquired by SimpleNexus.",
-    "I'm comfortable across the stack, but backend engineering is where I do my strongest work. I'm currently deepening my skills in system design and technical problem-solving through Formation, an interview-prep and career-acceleration program for senior engineers, while pursuing senior backend and full-stack roles with meaningful ownership — particularly in distributed systems, workflow automation, and AI-enabled products.",
+    "Most recently, I spent four years at Tesla Energy building services, APIs, integrations, and event-driven workflows for residential and commercial energy products. Before Tesla, I worked at LBA Ware, where I built high-performance BI dashboards that gave mortgage companies visibility into their operations — work that shipped shortly before the company was acquired by SimpleNexus.",
+    "I'm comfortable across the stack, but backend engineering is where I do my strongest work. I'm currently a Formation Fellow, working with experienced engineering mentors and peers to deepen my system-design, technical problem-solving, and leadership skills, while pursuing senior backend and full-stack roles with meaningful ownership — particularly in distributed systems, workflow automation, and AI-enabled products.",
   ],
 };
 
@@ -148,7 +148,7 @@ export const experience: ExperienceItem[] = [
     org: "LBA Ware (Acquired by SimpleNexus, an nCino Company)",
     dates: "Jan 2019 – Oct 2020",
     bullets: [
-      "Developed high-performance BI dashboards using Angular, TypeScript, C#/.NET, Redis, and SQL Server, enabling hundreds of mortgage companies to analyze operational and performance metrics while LBA Ware scaled rapidly and was ultimately acquired.",
+      "Developed high-performance BI dashboards using Angular, TypeScript, C#/.NET, Redis, and SQL Server, enabling mortgage companies to analyze operational and performance metrics while LBA Ware scaled rapidly and was ultimately acquired.",
       "Implemented Microsoft OAuth-based SSO, enabling users to securely authenticate with their existing Microsoft credentials and streamlining access across the platform.",
     ],
   },
