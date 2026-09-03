@@ -1,0 +1,38 @@
+{
+  "name": "portfolio-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:server": "npm run dev --prefix server",
+    "dev:all": "concurrently -n client,server -c blue,magenta \"npm run dev\" \"npm run dev:server\"",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "install:server": "npm install --prefix server",
+    "test": "vitest",
+    "test:run": "vitest --run",
+    "test:coverage": "vitest --coverage",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/supertest": "^7.2.1",
+    "@vitejs/plugin-react": "^6.1.1",
+    "@vitest/coverage-v8": "^5.0.0",
+    "concurrently": "^9.1.0",
+    "jsdom": "^30.0.1",
+    "prettier": "^3.9.6",
+    "supertest": "^7.2.2",
+    "typescript": "^5.6.3",
+    "vite": "^8.2.2"
+  }
+}
