@@ -125,14 +125,19 @@ ul {
 
 .nav-links a {
   color: var(--text-muted);
+  transition: color 0.15s ease;
 }
 
 .nav-links a:hover {
   color: var(--accent);
 }
 
+.nav-links a.active {
+  color: var(--accent);
+  font-weight: 500;
+}
+
 .nav-resume {
-  color: var(--accent) !important;
   font-weight: 500;
 }
 
