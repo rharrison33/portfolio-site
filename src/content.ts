@@ -47,7 +47,8 @@ export interface SkillGroup {
 export const profile: Profile = {
   name: "Robert Harrison",
   title: "Senior Software Engineer",
-  tagline: "Full-stack and distributed systems engineering, with deep backend expertise.",
+  tagline:
+    "Full-stack and distributed systems engineering, with deep backend expertise.",
   location: "Salt Lake City, UT",
   photo: "/photo.jpg",
   links: {
@@ -179,7 +180,15 @@ export const experience: ExperienceItem[] = [
 export const skills: SkillGroup[] = [
   {
     category: "Languages & Frameworks",
-    items: ["C#", ".NET", "JavaScript", "TypeScript", "Node.js", "React", "Angular"],
+    items: [
+      "C#",
+      ".NET",
+      "JavaScript",
+      "TypeScript",
+      "Node.js",
+      "React",
+      "Angular",
+    ],
   },
   {
     category: "Data & Messaging",

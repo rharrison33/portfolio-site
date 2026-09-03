@@ -31,7 +31,9 @@ async function sendNotificationEmail(submission: Submission): Promise<void> {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: CONTACT_FROM_EMAIL || "Portfolio Contact Form <onboarding@resend.dev>",
+      from:
+        CONTACT_FROM_EMAIL ||
+        "Robert Harrison Portfolio <noreply@robertharrison.dev>",
       to: CONTACT_TO_EMAIL,
       reply_to: submission.email,
       subject: `New portfolio message from ${submission.name}`,

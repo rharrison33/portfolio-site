@@ -48,7 +48,12 @@ export default function Nav() {
               {s.label}
             </a>
           ))}
-          <a href={profile.links.resume} className="nav-resume" target="_blank" rel="noreferrer">
+          <a
+            href={profile.links.resume}
+            className="nav-resume"
+            target="_blank"
+            rel="noreferrer"
+          >
             Résumé
           </a>
         </nav>
