@@ -60,9 +60,9 @@ export const profile: Profile = {
 
 export const about: AboutContent = {
   paragraphs: [
-    "I'm a senior software engineer with about nine years of experience, focused primarily on backend engineering and distributed systems. I studied Computer Science at Georgia Tech, and I've spent most of my career building systems that other engineers and operations teams depend on daily.",
-    "Most recently I spent about four years at Tesla Energy, working across residential and commercial energy products — building backend services, APIs, integrations, and event-driven workflows that supported large-scale sales and operations teams. Earlier in my career I worked at LBA Ware, a mortgage technology startup.",
-    "I'm comfortable working across the stack, but backend is where I do my strongest work. I'm currently a Formation Fellow, and I'm looking for senior backend or full-stack roles that involve hard technical problems, real system ownership, distributed systems, workflow automation, or AI-enabled products.",
+    "I'm a senior software engineer with about nine years of experience, focused primarily on backend engineering and distributed systems. I studied Computer Science at Georgia Tech, graduating with Highest Honors, and I've spent most of my career building systems that other engineers and operations teams depend on daily.",
+    "Most recently, I spent about four years at Tesla Energy, working across residential and commercial energy products — building full-stack platforms (React, .NET, PostgreSQL) alongside backend services, APIs, integrations, and event-driven workflows that supported large-scale sales and operations teams, including a system managing a multi-billion-dollar Megapack sales pipeline. Earlier in my career, I built high-performance BI dashboards at LBA Ware, a mortgage technology startup, giving hundreds of mortgage companies visibility into their operations — work that shipped shortly before the company was acquired by SimpleNexus.",
+    "I'm comfortable working across the stack, but backend is where I do my strongest work. I'm currently sharpening my skills through Formation, an interview-prep and career-acceleration program for senior engineers, and I'm looking for senior backend or full-stack roles that involve hard technical problems, real system ownership, distributed systems, workflow automation, or AI-enabled products.",
   ],
 };
 
