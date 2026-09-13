@@ -179,16 +179,29 @@ export const experience: ExperienceItem[] = [
 
 export const skills: SkillGroup[] = [
   {
-    category: "Languages & Frameworks",
+    category: "Languages",
+    items: ["JavaScript", "C#", "TypeScript", "SQL"],
+  },
+  {
+    category: "Frameworks & Architecture",
     items: [
-      "C#",
-      ".NET",
-      "JavaScript",
-      "TypeScript",
       "Node.js",
-      "React",
-      "Angular",
+      ".NET Core",
+      "REST APIs",
+      "Websockets",
+      "RPC",
+      "SSE",
+      "Microservices",
+      "Distributed Systems",
+      "Event-Driven Architecture",
+      "Camunda",
+      "Docker",
+      "Kubernetes",
     ],
+  },
+  {
+    category: "Front End",
+    items: ["React"],
   },
   {
     category: "Data & Messaging",
@@ -200,13 +213,5 @@ export const skills: SkillGroup[] = [
       "Dapper",
       "Entity Framework",
     ],
-  },
-  {
-    category: "APIs & Integration",
-    items: ["REST APIs"],
-  },
-  {
-    category: "Infrastructure",
-    items: ["Docker", "Kubernetes"],
   },
 ];
